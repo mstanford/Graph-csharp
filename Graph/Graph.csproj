@@ -1,0 +1,258 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65B5FE0E-7AE5-4FDD-BD4D-E5E74ADB32E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Graph</RootNamespace>
+    <AssemblyName>Graph</AssemblyName>
+    <ApplicationIcon>line-chart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action.cs" />
+    <Compile Include="Collections\Pool.cs" />
+    <Compile Include="Convert.cs" />
+    <Compile Include="Data\Binary.cs" />
+    <Compile Include="Data\Column.cs" />
+    <Compile Include="Data\Cube.cs" />
+    <Compile Include="Data\Hive.cs" />
+    <Compile Include="Data\Key.cs" />
+    <Compile Include="Data\Lookup.cs" />
+    <Compile Include="Data\Message.cs" />
+    <Compile Include="Data\Operators.cs" />
+    <Compile Include="Data\Tag.cs" />
+    <Compile Include="Distributions\BivariateDistribution.cs" />
+    <Compile Include="Distributions\BivariateNormalDistribution.cs" />
+    <Compile Include="Distributions\ChiSquareDistribution.cs" />
+    <Compile Include="Distributions\Distribution.cs" />
+    <Compile Include="Distributions\GaussianKernelDistribution.cs" />
+    <Compile Include="Distributions\KernelDistribution.cs" />
+    <Compile Include="Distributions\LogNormalDistribution.cs" />
+    <Compile Include="Distributions\NormalDistribution.cs" />
+    <Compile Include="Distributions\StudentsTDistribution.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Func.cs" />
+    <Compile Include="Functions\Abs.cs" />
+    <Compile Include="Functions\Add.cs" />
+    <Compile Include="Functions\CumulativeSum.cs" />
+    <Compile Include="Functions\Distributions\HistogramX.cs" />
+    <Compile Include="Functions\Distributions\HistogramY.cs" />
+    <Compile Include="Functions\Divide.cs" />
+    <Compile Include="Functions\Exp.cs" />
+    <Compile Include="Functions\Financial\BenchmarkNeutralReturns.cs" />
+    <Compile Include="Functions\Financial\BenchmarkNeutralReturns2.cs" />
+    <Compile Include="Functions\Financial\BetaNeutralReturns.cs" />
+    <Compile Include="Functions\Financial\AbsoluteReturns.cs" />
+    <Compile Include="Functions\Financial\CumulativeNegativeReturns.cs" />
+    <Compile Include="Functions\Financial\CumulativePositiveReturns.cs" />
+    <Compile Include="Functions\Financial\SquareReturns.cs" />
+    <Compile Include="Functions\Financial\DailyRate.cs" />
+    <Compile Include="Functions\Financial\Returns.cs" />
+    <Compile Include="Functions\Financial\EqualWeightReturns.cs" />
+    <Compile Include="Functions\Financial\LeveragedReturns.cs" />
+    <Compile Include="Functions\Financial\LongShortReturns.cs" />
+    <Compile Include="Functions\Financial\SplitAdjustedCumulativeReturns.cs" />
+    <Compile Include="Functions\Financial\SplitAdjustedLogReturns.cs" />
+    <Compile Include="Functions\Financial\TrailingVolatility.cs" />
+    <Compile Include="Functions\Function.cs" />
+    <Compile Include="Functions\Financial\CumulativeReturns.cs" />
+    <Compile Include="Functions\Financial\CumulativeSquareReturns.cs" />
+    <Compile Include="Functions\Financial\LogReturns.cs" />
+    <Compile Include="Functions\Length.cs" />
+    <Compile Include="Functions\Log.cs" />
+    <Compile Include="Functions\Log10.cs" />
+    <Compile Include="Functions\Max.cs" />
+    <Compile Include="Functions\Min.cs" />
+    <Compile Include="Functions\Multiply.cs" />
+    <Compile Include="Functions\Square.cs" />
+    <Compile Include="Functions\SquareRoot.cs" />
+    <Compile Include="Functions\Statistics\CumulativeMuOverSigma.cs" />
+    <Compile Include="Functions\Statistics\TrailingMuOverSigma.cs" />
+    <Compile Include="Functions\Statistics\CumulativeSharpe.cs" />
+    <Compile Include="Functions\Statistics\MedianOfMedians.cs" />
+    <Compile Include="Functions\Statistics\TrailingSharpe.cs" />
+    <Compile Include="Functions\Statistics\CumulativeBeta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\CumulativeCorrelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\CumulativeCovariance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\CumulativeMean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\CumulativeStandardDeviation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\CumulativeVariance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingBeta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingCorrelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingCovariance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingLeastSquares.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingMax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingMean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingMin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingStandardDeviation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingStatistic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingVariance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\MovingZScore.cs" />
+    <Compile Include="Functions\Statistics\TrailingBeta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\TrailingCorrelation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\TrailingCovariance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\TrailingMean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\TrailingStandardDeviation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\TrailingVariance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Statistics\TrailingZScore.cs" />
+    <Compile Include="Functions\Subtract.cs" />
+    <Compile Include="Functions\Transpose.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\Directory.cs" />
+    <Compile Include="IO\File.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Scripting\Convert.cs" />
+    <Compile Include="Scripting\Evaluator.cs" />
+    <Compile Include="Scripting\Expression.cs" />
+    <Compile Include="Scripting\Frame.cs" />
+    <Compile Include="Scripting\Parser.cs" />
+    <Compile Include="Scripting\TypeResolver.cs" />
+    <Compile Include="Tasks\Power.cs" />
+    <Compile Include="Widgets\Border.cs" />
+    <Compile Include="Widgets\Chart.cs" />
+    <Compile Include="Widgets\Column.cs" />
+    <Compile Include="Widgets\ColumnChart.cs" />
+    <Compile Include="Widgets\StaticLabel.cs" />
+    <Compile Include="Widgets\SmallTitle.cs" />
+    <Compile Include="Widgets\ExpandableGrid.cs" />
+    <Compile Include="Widgets\DashedLineChart.cs" />
+    <Compile Include="Widgets\Grid.cs" />
+    <Compile Include="Widgets\GridCell.cs" />
+    <Compile Include="Widgets\HorizontalSlider.cs" />
+    <Compile Include="Widgets\Label.cs" />
+    <Compile Include="Widgets\Legend.cs" />
+    <Compile Include="Widgets\LineChart.cs" />
+    <Compile Include="Widgets\Margin.cs" />
+    <Compile Include="Widgets\MultiSelector.cs" />
+    <Compile Include="Widgets\Row.cs" />
+    <Compile Include="Widgets\Scales\Label.cs" />
+    <Compile Include="Widgets\Scales\LabelScale.cs" />
+    <Compile Include="Widgets\Scales\LinearScale.cs" />
+    <Compile Include="Widgets\Scales\LogarithmicScale.cs" />
+    <Compile Include="Widgets\Scales\Scale.cs" />
+    <Compile Include="Widgets\Scales\TimeSeriesScale.cs" />
+    <Compile Include="Widgets\ScatterChart.cs" />
+    <Compile Include="Widgets\Selector.cs" />
+    <Compile Include="Widgets\Style.cs" />
+    <Compile Include="Widgets\Title.cs" />
+    <Compile Include="Widgets\VerticalSlider.cs" />
+    <Compile Include="Widgets\Widget.cs" />
+    <Compile Include="Widgets\XAxis.cs" />
+    <Compile Include="Widgets\YAxis.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="line-chart.ico" />
+    <EmbeddedResource Include="Scripting\Evaluator.def" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
